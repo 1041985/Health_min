@@ -1,0 +1,55 @@
+
+-- 회원 테이블 
+
+drop sequence seq_memht;
+
+create sequence seq_memht
+	start with 1 
+	increment by 1 
+	nocache ;
+
+DROP TABLE member_health CASCADE CONSTRAINTS;
+
+create table member_health(
+	num number primary key,
+	id varchar2(30),
+	name varchar2(30),
+	pw varchar2(30),
+	gender varchar2(10),
+	addr varchar2(200),
+	email varchar2(50),
+	hp varchar2(30),
+	authority number default 0
+) ;
+
+
+-- 커뮤니티 게시판
+ 
+drop sequence seq_cb;
+
+create sequence seq_cb
+start with 1 
+increment by 1 
+nocache ;
+
+ DROP TABLE board_co_health CASCADE CONSTRAINTS;
+
+create table board_co_health(
+   cbnum number primary key,
+   cbid varchar2(30),
+   cbname varchar2(30),
+   cbpw varchar2(30),
+   cbtitle varchar2(100),
+   cbcontents varchar(3000),
+   cbimage varchar2(300),
+   cbday date default sysdate,
+   ref number not null,
+   re_step number not null,
+   re_level number not null,
+   cbcate varchar2(50),
+   cbcount number default 0
+   ) ;
+   
+   
+   
+   

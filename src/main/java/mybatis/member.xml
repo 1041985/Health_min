@@ -6,3 +6,6 @@
   <mapper namespace="member.model.member">
   
   </mapper>
+  
+  <!-- member.xml -->
+  

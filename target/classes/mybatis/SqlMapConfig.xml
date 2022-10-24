@@ -6,18 +6,15 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="member.model.MemberBean" alias="MyMember"/>
-		<!-- <typeAlias type="product.model.ProductBean" alias="MyProduct"/> -->
+		<typeAlias type="boardmain.model.BoardmainBean" alias="MyBoardmain"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mybatis/member.xml"/>
-<!-- 		<mapper resource="mybatis/product.xml"/>
-		<mapper resource="mybatis/order.xml"/>
-		<mapper resource="mybatis/orderdetail.xml"/> -->
+		<mapper resource="mybatis/boardmain.xml"/>
 	</mappers>
 	
 </configuration>
 
-
-
 <!-- SqlMapConfig.xml -->
+
